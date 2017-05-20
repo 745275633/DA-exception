@@ -49,7 +49,7 @@
 	}\
 	catch(::std::exception &e)\
 	{\
-		BOOST_THROW_EXCEPTION(e);\
+		DA_THROW_EXCEPTION_1(e.what);\
 	}\
 	catch(...)\
 	{\
@@ -85,6 +85,14 @@
 		::std::cerr << "error" << ::std::endl;\
 		endfun;\
 	}
+#ifdef DA_EXCEPTION
+	#define DA_THROW_EXCEPTION_0 THROW_0
+	#define DA_THROW_EXCEPTION_1 THROW_1
+	#define DA_THROW_EXCEPTION_3 THROW_3
+	#define DA_CATCH_EXCEPTION CATCH
+	#define DA_MAIN_CATCH_EXCEPTION MAIN_CATCH
+	#define DA_MAIN_CATCH_EXCEPTION_ENDFUN MAIN_CATCH_ENDFUN
+#endif
 
 namespace DA
 {
