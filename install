@@ -1,2 +1,8 @@
-install -d /usr/include/DA
-install -Dm644 exception.hpp /usr/include/DA
+prefix=/usr
+if [ $1 ]; then
+	prefix=$1
+fi
+echo "installing to $prefix ..."
+
+install -d "${prefix}/include/DA"
+install -Dm644 exception.hpp "${prefix}/include/DA"

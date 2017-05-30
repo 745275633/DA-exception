@@ -49,7 +49,7 @@
 	}\
 	catch(::std::exception &e)\
 	{\
-		DA_THROW_EXCEPTION_1(e.what);\
+		DA_THROW_EXCEPTION_1(e.what());\
 	}\
 	catch(...)\
 	{\
