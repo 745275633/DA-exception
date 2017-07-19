@@ -5,4 +5,4 @@ fi
 echo "installing to $prefix ..."
 
 install -d "${prefix}/include/DA"
-install -Dm644 exception.hpp "${prefix}/include/DA"
+install -Dm644 "include/DA/exception.hpp" "${prefix}/include/DA"
