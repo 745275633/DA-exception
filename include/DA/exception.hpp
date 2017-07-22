@@ -50,6 +50,26 @@
   {\
     DA_THROW_0();\
   }
+#define DA_CATCH_STH(x) \
+  catch(const ::DA::exception &e)\
+  {\
+    ::std::cerr << *::boost::get_error_info< ::boost::throw_file>(e) \
+    << "(" << *::boost::get_error_info< ::boost::throw_line>(e) \
+    << "): Throw in function " \
+    << *::boost::get_error_info< ::boost::throw_function>(e) << ::std::endl; \
+    x; \
+    e << ::boost::throw_function(BOOST_CURRENT_FUNCTION) \
+    << ::boost::throw_file(__FILE__) << ::boost::throw_line(__LINE__); \
+    throw;\
+  }\
+  catch(const ::std::exception &e)\
+  {\
+    DA_THROW_1(e.what());\
+  }\
+  catch(...)\
+  {\
+    DA_THROW_0();\
+  }
 
 #define DA_MAIN_CATCH \
 	catch(const ::DA::exception &e)\
