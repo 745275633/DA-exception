@@ -1,0 +1,14 @@
+master(v1.0.1):
+  Code:
+    - Add changelog
+v1.0.0:
+  Feature:
+    - DA_THROW_0()
+    - DA_THROW_1(message)
+    - DA_THROW_3(name, type, message)
+    - DA_CATCH
+    - DA_CATCH_STH(x)
+    - DA_MAIN_CATCH
+    - DA_MAIN_CATCH_ENDFUN(endfun)
+    - DA_EXCEPTION
+
