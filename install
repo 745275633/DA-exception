@@ -1,7 +1,7 @@
 #!/bin/bash
 prefix=/usr
 if [ $1 ]; then
-	prefix=$1
+  prefix=$1
 fi
 echo "installing to $prefix ..."
 

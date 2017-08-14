@@ -1,5 +1,6 @@
 master(v1.0.1):
   Code:
+    - install file style
     - Add shebang in install
     - Add changelog
 v1.0.0:
