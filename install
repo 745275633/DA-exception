@@ -1,3 +1,4 @@
+#!/bin/bash
 prefix=/usr
 if [ $1 ]; then
 	prefix=$1
